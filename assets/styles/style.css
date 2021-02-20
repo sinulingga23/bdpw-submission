@@ -6,10 +6,12 @@
 body {
   width: 1200px;
   margin: 0 auto;
-  background-image: linear-gradient(to bottom, rgba(190, 190, 190, 0.5), rgba(245, 246, 252, 0.52));
+  padding: 0;
+  background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.1), rgba(30, 30, 30, 0.1));
 }
 
 main {
+  padding: 5px;
   overflow: auto;
 }
 
@@ -20,8 +22,8 @@ header {
 
 header h1,
 header p {
-  width: 80%;
-  text-align: center;
+  width: 100%;
+  color: black;
 }
 
 header p {
@@ -30,8 +32,7 @@ header p {
 
 
 header nav {
-  text-align: left;
-  background-color: rgba(190, 190, 190, 0.8);
+  background-color: rgba(190, 190, 190, 1);
   padding: 5px;
   position: sticky;
   top: 0;
@@ -41,10 +42,6 @@ header nav {
 
 nav ul li {
   list-style-type: none;
-}
-
-header nav ul li {
-  display: inline;
 }
 
 nav ul li:hover {
@@ -64,6 +61,20 @@ header nav ul li {
   display: flex;
   flex-direction: column;
 }
+
+#content .slider {
+  background-color: rgba(190, 190, 190, 0.3);
+  padding: 10px;
+  border: 3px solid whitesmoke;
+}
+
+
+#content img {
+  width: 100%;
+  height: 350px;
+  border: 3px solid whitesmoke;
+}
+
 
 .menu {
   padding: 5px;
@@ -113,21 +124,49 @@ footer div {
 
 .description {
   flex-direction: column;
+  background-color: rgba(190, 190, 190, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .description article {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
   padding: 5px;
+  border-bottom: 2px dashed whitesmoke;
+}
+
+.description article:hover {
+  background-color: rgba(190, 190, 190, 0.5);
 }
 
 .description p {
   text-align: justify;
 }
 
+
+.description img {
+  width: 100%;
+  height: 250px;
+}
+
 aside {
   float: right;
   width: 20%;
+}
+
+aside h3 {
+  text-align: center;
+}
+
+
+aside img {
+  width: 100%;
+  padding: 5px;
 }
 
 main,
@@ -145,7 +184,7 @@ footer nav ul li {
 }
 
 @media screen and (max-width: 500px) {
-  body {
+  body, #content, aside {
     width: 100%;
   }
 
@@ -161,22 +200,22 @@ footer nav ul li {
   .row {
     width: 90%;
     flex-direction: column;
+    margin: 0 auto;
   }
 
-  main aside {
-    padding: 0;
-    margin: 0;
-    width: 90%;
-  }
 
   main aside h3 {
     margin: 0 auto;
   }
 
+  .play-adventure button {
+    padding: 10px;
+  }
 
   .description article {
     margin-left: 10px;
   }
+
 
   .menu h2 {
     font-size: 1.2em;
@@ -188,7 +227,6 @@ footer nav ul li {
   }
 
   footer  {
-    width: 90%;
     flex-direction: column;
   }
 

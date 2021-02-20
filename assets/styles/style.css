@@ -129,7 +129,7 @@ footer div {
   border-radius: 10px;
 }
 
-.row {
+.row, aside {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -167,6 +167,11 @@ aside h3 {
 aside img {
   width: 100%;
   padding: 5px;
+}
+
+aside table {
+  margin: 0 auto;
+  text-align: left;
 }
 
 main,

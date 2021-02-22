@@ -120,6 +120,10 @@ header nav ul li a {
   border-radius: 20px;
 }
 
+.play-adventure span {
+  margin-right: 7px;
+}
+
 .row,
 footer  {
   display: flex;
